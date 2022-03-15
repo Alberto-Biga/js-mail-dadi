@@ -11,8 +11,6 @@ let mailAutorizzate = [
 ];
 
 let mail = prompt("Inserisci e verifica la tua mail");
-console.log(mailAutorizzate.length);
-console.log(mail);
 
 let mailTrovata = false
 
@@ -21,7 +19,6 @@ for( let i=0; i < mailAutorizzate.length; i++ ){
     mailTrovata = true
   }
 }
-
 
 if ( mailTrovata == true ){
   document.getElementById("container").innerHTML = "Perfetto, sei autorizzato!";
