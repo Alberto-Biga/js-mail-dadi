@@ -7,19 +7,24 @@ let mailAutorizzate = [
     "elisa@gmail.com",
     "marco@gmail.com",
     "alberto@gmail.com",
-    "mario@gmail.com"
+    "mario@gmail.com"    
 ];
 
 let mail = prompt("Inserisci e verifica la tua mail");
-console.log(mailAutorizzate)
-console.log(mail)
+console.log(mailAutorizzate.length);
+console.log(mail);
 
-for( i=0; i < mailAutorizzate.length; i++ ){
+let mailTrovata = false
 
-  if ( mailAutorizzate[i] == mail ){
-    document.getElementById("container").innerHTML = "Perfetto, sei autorizzato";
-  } else if ( mailAutorizzate[i] != mail ){
-    document.getElementById("container").innerHTML = "NON ACCETTIAMO INTRUSI! Inserisci una mail valida!";  
+for( let i=0; i < mailAutorizzate.length; i++ ){
+  if  ( mailAutorizzate[i] == mail ) {
+    mailTrovata = true
   }
+}
 
+
+if ( mailTrovata == true ){
+  document.getElementById("container").innerHTML = "Perfetto, sei autorizzato!";
+} else {
+  document.getElementById("container").innerHTML = "NON ACCETTIAMO INTRUSI! Inserisci una mail valida!";  
 }
